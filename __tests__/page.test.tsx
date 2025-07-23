@@ -19,22 +19,22 @@ describe("Page", () => {
 
   //test
 
-  //   it("renders a button and responds to click", () => {
-  //     render(<Page />);
-  //     const button = screen.getByRole("button", { name: /click me/i });
-  //     expect(button).toBeInTheDocument();
-  //     fireEvent.click(button);
-  //     expect(screen.getByText(/you clicked the button/i)).toBeInTheDocument();
-  //   });
+  it("renders a button and responds to click", () => {
+    render(<Page />);
+    const button = screen.getByRole("button", { name: /click me/i });
+    expect(button).toBeInTheDocument();
+    fireEvent.click(button);
+    expect(screen.getByText(/you clicked the button/i)).toBeInTheDocument();
+  });
 
-  //   it("renders a list of services", () => {
-  //     render(<Page />);
-  //     const listItems = screen.getAllByRole("listitem");
-  //     expect(listItems).toHaveLength(3);
-  //     expect(listItems.map((li) => li.textContent)).toEqual([
-  //       "Service A",
-  //       "Service B",
-  //       "Service C",
-  //     ]);
-  //   });
+  it("renders a list of services", () => {
+    render(<Page />);
+    const listItems = screen.getAllByRole("listitem");
+    expect(listItems).toHaveLength(3);
+    expect(listItems.map((li) => li.textContent)).toEqual([
+      "Service A",
+      "Service B",
+      "Service C",
+    ]);
+  });
 });
